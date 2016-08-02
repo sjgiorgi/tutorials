@@ -1,0 +1,6 @@
+[constants]
+corpdb = dla_tutorial
+corptable = msgs_xxx
+correl_field = user_id
+outcometable = masterstats_r500
+outcomefields = demog_age, demog_gender
