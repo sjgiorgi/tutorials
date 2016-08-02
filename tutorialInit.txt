@@ -2,5 +2,7 @@
 corpdb = dla_tutorial
 corptable = msgs_xxx
 correl_field = user_id
+feattable = feat$1gram$msgs_xxx$user_id$16to16
 outcometable = masterstats_r500
+outcomecontrols = big5_ope, big5_con, big5_ext, big5_agr, big5_neu
 outcomefields = demog_age, demog_gender
