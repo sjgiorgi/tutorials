@@ -4,11 +4,8 @@ print "mif and mm..."
 import sys
 sys.path.append("/home/sgiorgi/newPERMA/CoreInfrastructure/")
 from FeatureWorker.featureStar import FeatureStar
-from FeatureWorker.outcomeGetter import OutcomeGetter
-from FeatureWorker.featureGetter import FeatureGetter
 import FeatureWorker.fwConstants as fwc
 from FeatureWorker.mysqlMethods import mysql_iter_funcs as mif
-from FeatureWorker.mysqlMethods import mysqlMethods as mm
 
 # pandas
 print "pandas as pd...", 
