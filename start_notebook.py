@@ -44,15 +44,3 @@ else:
     print "No engine initialized. Initialize with:"
     print "> db_eng = mif.get_db_engine(db)"
     print ""
-
-# def concatDFs(dataframes):
-# 	return pd.concat(dataframes, axis=0)
-
-# def newDF(sql, index, con=db_eng):
-# 	if not con:
-# 		con = db_eng
-# 	return pd.read_sql(sql=sql, con=con, index_col=index)
-
-# print "Methods:"
-# print "\tconcatDFs(dataframes)"
-# print "\tnewDF(sql, index, con=db_eng)"
