@@ -22,7 +22,7 @@ Note if port is already in use on venti you will get the follow message (where `
 ```
 To fix this use `8888` instead of `myportnumber` in the next command.
 
-* On your local machine run
+* On your local machine run (preferably also inside a screen session):
 ```bash
 ssh -i /path/to/public/key -NL port:localhost:myportnumber username@venti-host-name
 ```
