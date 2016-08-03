@@ -9,14 +9,26 @@
 ```bash
 screen -R myNotebook
 ```
-* Start the notebook
+* Start the notebook. The directory where you run this line will be your home directory in your notebook.
 ```bash
-jupyter notebook --no-browser
+jupyter notebook --no-browser --port=myportnumber
 ```
+Note if port is already in use on venti you will get the follow message (where `myportnumber=8887`):
+```
+[I 09:03:23.972 NotebookApp] The port 8887 is already in use, trying another random port.
+[I 09:03:23.975 NotebookApp] Serving notebooks from local directory: /home/sgiorgi
+[I 09:03:23.975 NotebookApp] 0 active kernels 
+[I 09:03:23.975 NotebookApp] The IPython Notebook is running at: http://localhost:8888/
+```
+To fix this use `8888` instead of `myportnumber` in the next command.
+
 * On your local machine run
 ```bash
-ssh -i /path/to/public/key -NL 8157:localhost:8888 username@venti-host-name
+ssh -i /path/to/public/key -NL port:localhost:myportnumber username@venti-host-name
 ```
+* Open a web browser and go to localhost:port
+
+
 
 ### Resources
 Feature Worker
