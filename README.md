@@ -13,7 +13,7 @@ screen -R myNotebook
 ```bash
 jupyter notebook --no-browser --port=myportnumber
 ```
-Note if port is already in use on venti you will get the follow message (where `myportnumber=8887`):
+Note if port is already in use on venti you will get the follow message (in this example `myportnumber=8887`):
 ```
 [I 09:03:23.972 NotebookApp] The port 8887 is already in use, trying another random port.
 [I 09:03:23.975 NotebookApp] Serving notebooks from local directory: /home/sgiorgi
