@@ -4,6 +4,20 @@
 * tutorialInit.txt: init file with FeatureWorker parameters
 * dlaTutorial.ipynb: jupyter notebook
 
+### Start a notebook
+* Log into venti and start a screen session:
+```bash
+screen -R myNotebook
+```
+* Start the notebook
+```bash
+jupyter notebook --no-browser
+```
+* On your local machine run
+```bash
+ssh -i /path/to/public/key -NL 8157:localhost:8888 username@venti-host-name
+```
+
 ### Resources
 Feature Worker
 * [Working with FeatureWorker classes](http://wiki.wwbp.org/pmwiki.php/Tutorials/WorkingWithClasses)
