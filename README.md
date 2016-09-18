@@ -32,10 +32,9 @@ ssh -i /path/to/public/key -NL port:localhost:myportnumber username@venti-host-n
 
 ### Resources
 Feature Worker
-* [Working with FeatureWorker classes](http://wiki.wwbp.org/pmwiki.php/Tutorials/WorkingWithClasses)
-* [Pandas for WWBP](http://wiki.wwbp.org/pmwiki.php/Tutorials/PandasForWWBP)
-* [Loading variables from a file](http://wiki.wwbp.org/pmwiki.php/FwInterfaceDocumentation/FromFile)
-* [Creating an init file with fwInterface](http://wiki.wwbp.org/pmwiki.php/FwInterfaceDocumentation/ToFile)
+* [Working with FeatureWorker classes](http://dlatk.wwbp.org/tutorials/tut_classes.html)
+* [Pandas for WWBP](http://dlatk.wwbp.org/tutorials/tut_pandas.html)
+* [Creating an init file with fwInterface](http://dlatk.wwbp.org/tutorials/tut_ini_files.html)
 
 Other
 * [Seaborn: statistical data visualization](https://stanford.edu/~mwaskom/software/seaborn/)
