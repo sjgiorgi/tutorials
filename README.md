@@ -33,7 +33,7 @@ To fix this use `8888` instead of `myportnumber` in the next command. In the las
 
 The general command for this mapping is 
 ```bash
-ssh -i /path/to/public/key -NL port:localhost:myportnumber username@remote-host-name
+ssh -i /path/to/privatekey/directory -NL port:localhost:myportnumber username@remote-host-name
 ```
 
 So on your local machine run (preferably also inside a screen session):
@@ -42,6 +42,26 @@ ssh -i /path/to/public/key -NL 8886:localhost:8888 username@remote-host-name
 ```
 
 Here `myportnumber` refers to the port on your remote machine (`8888` in this example) and `port` refers to an open port on your local machine (`8886` in this example). There is no reason the two numbers need to be different. You can easily connect port `8888` on your remote machine to port `8888` on your local machine with `... 8888:localhost:8888 ...`
+
+From the `ssh` manual:
+
+```bash
+-i identity_file
+             Selects a file from which the identity (private key) for public key authentication is read.  The default is ~/.ssh/identity for protocol version 1, and
+             ~/.ssh/id_dsa, ~/.ssh/id_ecdsa, ~/.ssh/id_ed25519 and ~/.ssh/id_rsa for protocol version 2.  Identity files may also be specified on a per-host basis in the con‐
+             figuration file.  It is possible to have multiple -i options (and multiple identities specified in configuration files).  ssh will also try to load certificate
+             information from the filename obtained by appending -cert.pub to identity filenames.
+             
+-N      Do not execute a remote command.  This is useful for just forwarding ports (protocol version 2 only).
+-L [bind_address:]port:host:hostport
+             Specifies that the given port on the local (client) host is to be forwarded to the given host and port on the remote side.  This works by allocating a socket to
+             listen to port on the local side, optionally bound to the specified bind_address.  Whenever a connection is made to this port, the connection is forwarded over the
+             secure channel, and a connection is made to host port hostport from the remote machine.  Port forwardings can also be specified in the configuration file.  IPv6
+             addresses can be specified by enclosing the address in square brackets.  Only the superuser can forward privileged ports.  By default, the local port is bound in
+             accordance with the GatewayPorts setting.  However, an explicit bind_address may be used to bind the connection to a specific address.  The bind_address of
+             “localhost” indicates that the listening port be bound for local use only, while an empty address or ‘*’ indicates that the port should be available from all
+             interfaces.
+```
 
 **Step 4**: Open the notebook in a web browser
 
