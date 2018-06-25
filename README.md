@@ -5,11 +5,15 @@
 * dlaTutorial.ipynb: jupyter notebook
 
 ### Start a notebook
-* Log into your remote server and start a screen session:
+**Step 1**: Connect to the remote server
+
+Log into your remote server and start a screen session:
 ```bash
 screen -R myNotebook
 ```
-* Before starting the notebook we note that notebook files will be written to the directory from which you are running the notebook. So we will first create a directory called `my_notebooks`, move into that directory and then start the server:
+**Step 2**: Start the Jupyter server
+
+Before starting the notebook we note that notebook files will be written to the directory from which you are running the notebook. So we will first create a directory called `my_notebooks`, move into that directory and then start the server:
 ```bash
 mkdir my_notebooks && cd "$_"
 jupyter notebook --no-browser --port=myportnumber
@@ -25,7 +29,9 @@ Here `myportnumber` is a free port on the remote machine (for example `8887`). N
 ```
 To fix this use `8888` instead of `myportnumber` in the next command. In the last line above the `http://localhost:8888/` is referring to your remote machine. In the next step we will map the remote host / port to your local host /port.
 
-* The general command for this mapping is 
+**Step 3**: Map the Jupyter server on the remote machine to your local machine
+
+The general command for this mapping is 
 ```bash
 ssh -i /path/to/public/key -NL port:localhost:myportnumber username@remote-host-name
 ```
@@ -37,8 +43,9 @@ ssh -i /path/to/public/key -NL 8886:localhost:8888 username@remote-host-name
 
 Here `myportnumber` refers to the port on your remote machine (`8888` in this example) and `port` refers to an open port on your local machine (`8886` in this example). There is no reason the two numbers need to be different. You can easily connect port `8888` on your remote machine to port `8888` on your local machine with `... 8888:localhost:8888 ...`
 
+**Step 4**: Open the notebook in a web browser
 
-* Open a web browser and go to `localhost:port` (in this example `localhost:8886`). 
+Open a web browser and go to `localhost:port` (in this example `http://localhost:8886`). 
 
 
 
